@@ -1,0 +1,21 @@
+{
+  "sample": true,
+  "note": "Synthetic data, unverified; not a statutory report.",
+  "shipId": "1234567",
+  "arrivalYear": "2026",
+  "arrivalSequence": "001",
+  "voyageNumber": "RV-TEST-001",
+  "bpId": "BP-06",
+  "sourceMessageId": "rd24001-bp-06-demo",
+  "eventDateTime": "2026-11-02T10:00:00Z",
+  "payload": {
+    "emissionMonitoring": {
+      "eventTime": "2026-11-02T10:00:00Z",
+      "fuelConsumption": 11200,
+      "fuelUnitCode": "kg",
+      "fuelType": "HFO",
+      "co2EmissionRate": 35907.2,
+      "methodologyRef": "SIM-CF-1.0"
+    }
+  }
+}
