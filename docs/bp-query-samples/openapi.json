@@ -1,0 +1,124 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "RD24001 BP sample GET endpoints",
+    "version": "1.0.0",
+    "description": "Static public synthetic data only; ship/year/arrival sequence are fixed URL path components. Not dynamic search, official IMO reporting, or IDS enforcement."
+  },
+  "servers": [
+    {
+      "url": "https://api.github.com/repos/javaeye-klnet/RD24001/contents/docs/bp-query-samples",
+      "description": "Private repository: GitHub authorization and Accept: application/vnd.github.raw+json are required. Static paths only."
+    }
+  ],
+  "paths": {
+    "/ships/1234567/arrivals/2026/001/bp-01.json": {
+      "get": {
+        "summary": "BP-01 synthetic sample",
+        "operationId": "getBp01Sample",
+        "responses": {
+          "200": {
+            "description": "Static synthetic BP sample",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ships/1234567/arrivals/2026/001/bp-02.json": {
+      "get": {
+        "summary": "BP-02 synthetic sample",
+        "operationId": "getBp02Sample",
+        "responses": {
+          "200": {
+            "description": "Static synthetic BP sample",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ships/1234567/arrivals/2026/001/bp-03.json": {
+      "get": {
+        "summary": "BP-03 synthetic sample",
+        "operationId": "getBp03Sample",
+        "responses": {
+          "200": {
+            "description": "Static synthetic BP sample",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ships/1234567/arrivals/2026/001/bp-04.json": {
+      "get": {
+        "summary": "BP-04 synthetic sample",
+        "operationId": "getBp04Sample",
+        "responses": {
+          "200": {
+            "description": "Static synthetic BP sample",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ships/1234567/arrivals/2026/001/bp-05.json": {
+      "get": {
+        "summary": "BP-05 synthetic sample",
+        "operationId": "getBp05Sample",
+        "responses": {
+          "200": {
+            "description": "Static synthetic BP sample",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/ships/1234567/arrivals/2026/001/bp-06.json": {
+      "get": {
+        "summary": "BP-06 synthetic sample",
+        "operationId": "getBp06Sample",
+        "responses": {
+          "200": {
+            "description": "Static synthetic BP sample",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
