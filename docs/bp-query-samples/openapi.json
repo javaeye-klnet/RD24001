@@ -7,8 +7,8 @@
   },
   "servers": [
     {
-      "url": "https://api.github.com/repos/javaeye-klnet/RD24001/contents/docs/bp-query-samples",
-      "description": "Private repository: GitHub authorization and Accept: application/vnd.github.raw+json are required. Static paths only."
+      "url": "https://raw.githubusercontent.com/javaeye-klnet/RD24001/main/docs/bp-query-samples",
+      "description": "Public static JSON sample paths; no dynamic filtering."
     }
   ],
   "paths": {
