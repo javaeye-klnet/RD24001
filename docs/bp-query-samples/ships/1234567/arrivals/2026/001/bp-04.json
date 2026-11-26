@@ -1,7 +1,7 @@
 {
   "sample": true,
   "note": "Synthetic data, unverified; not a statutory report.",
-  "imoShipNumber": "1234567",
+  "shipImoNumber": "1234567",
   "arrivalYear": "2026",
   "arrivalSequence": "001",
   "voyageNumber": "001W",

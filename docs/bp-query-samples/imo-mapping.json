@@ -3,17 +3,21 @@
   "referenceChecked": "2026-11-26",
   "mappings": [
     {
-      "sampleJsonPath": "$.imoShipNumber",
+      "sampleJsonPath": "$.shipImoNumber",
       "bpSourceJsonPath": "$.vessel.imoNumber",
       "imoDataNumber": "IMO0140",
+      "imoDataElementName": "Ship IMO number",
       "imoReferenceModelName": "FAL_ Transport Means. IMO Ship Number. Identifier",
+      "format": "an..7",
       "source": "https://imocompendium.imo.org/public/IMO-Compendium/Current/DS/General%20Declaration/d11.htm"
     },
     {
       "sampleJsonPath": "$.voyageNumber",
       "bpSourceJsonPath": "$.voyage.voyageNumber",
       "imoDataNumber": "IMO0191",
+      "imoDataElementName": "Voyage number",
       "imoReferenceModelName": "FAL_ Transport Movement. Voyage Number. Identifier",
+      "format": "an..17",
       "source": "https://imocompendium.imo.org/public/IMO-Compendium/Current/DS/General%20Declaration/d11.htm",
       "note": "Synthetic example value 001W replaces source sample RV-TEST-001."
     }

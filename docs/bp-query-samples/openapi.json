@@ -2,8 +2,8 @@
   "openapi": "3.0.3",
   "info": {
     "title": "RD24001 BP sample GET endpoints",
-    "version": "2.0.0",
-    "description": "Static public synthetic data. imoShipNumber and voyageNumber correspond semantically to IMO0140 and IMO0191. All other fields remain project data; see imo-mapping.json. The shipId field was renamed to imoShipNumber. Fixed paths, not dynamic search or official IMO reporting."
+    "version": "3.0.0",
+    "description": "Static public synthetic data. shipImoNumber and voyageNumber correspond semantically to IMO0140 and IMO0191. All other fields remain project data; see imo-mapping.json. The former imoShipNumber field is renamed to shipImoNumber. Fixed paths, not dynamic search or official IMO reporting."
   },
   "servers": [
     {
@@ -15,11 +15,11 @@
     "schemas": {
       "BpSample": {
         "type": "object",
-        "required": ["sample", "imoShipNumber", "voyageNumber", "arrivalYear", "arrivalSequence", "bpId", "payload"],
+        "required": ["sample", "shipImoNumber", "voyageNumber", "arrivalYear", "arrivalSequence", "bpId", "payload"],
         "properties": {
           "sample": {"type": "boolean"},
-          "imoShipNumber": {"type": "string", "description": "Project JSON name; semantic mapping to IMO0140 Ship IMO number.", "example": "1234567"},
-          "voyageNumber": {"type": "string", "description": "Project JSON name; semantic mapping to IMO0191 Voyage number.", "example": "001W"},
+          "shipImoNumber": {"type": "string", "maxLength": 7, "description": "Project JSON name reflecting IMO0140 data element Ship IMO number; Reference Model FAL_ Transport Means. IMO Ship Number. Identifier.", "example": "1234567"},
+          "voyageNumber": {"type": "string", "maxLength": 17, "description": "Project JSON name; semantic mapping to IMO0191 Voyage number.", "example": "001W"},
           "arrivalYear": {"type": "string", "description": "RD24001 simulated port context; not an asserted IMO mapping."},
           "arrivalSequence": {"type": "string", "description": "RD24001 simulated port arrival count; not the voyage number."},
           "bpId": {"type": "string", "description": "RD24001 business process ID."},
