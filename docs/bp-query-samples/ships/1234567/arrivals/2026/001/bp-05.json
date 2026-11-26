@@ -1,10 +1,10 @@
 {
   "sample": true,
   "note": "Synthetic data, unverified; not a statutory report.",
-  "shipId": "1234567",
+  "imoShipNumber": "1234567",
   "arrivalYear": "2026",
   "arrivalSequence": "001",
-  "voyageNumber": "RV-TEST-001",
+  "voyageNumber": "001W",
   "bpId": "BP-05",
   "sourceMessageId": "rd24001-bp-05-demo",
   "eventDateTime": "2026-11-02T10:00:00Z",

@@ -2,8 +2,8 @@
   "openapi": "3.0.3",
   "info": {
     "title": "RD24001 BP sample GET endpoints",
-    "version": "1.0.0",
-    "description": "Static public synthetic data only; ship/year/arrival sequence are fixed URL path components. Not dynamic search, official IMO reporting, or IDS enforcement."
+    "version": "2.0.0",
+    "description": "Static public synthetic data. imoShipNumber and voyageNumber correspond semantically to IMO0140 and IMO0191. All other fields remain project data; see imo-mapping.json. The shipId field was renamed to imoShipNumber. Fixed paths, not dynamic search or official IMO reporting."
   },
   "servers": [
     {
@@ -11,6 +11,23 @@
       "description": "Public static JSON sample paths; no dynamic filtering."
     }
   ],
+  "components": {
+    "schemas": {
+      "BpSample": {
+        "type": "object",
+        "required": ["sample", "imoShipNumber", "voyageNumber", "arrivalYear", "arrivalSequence", "bpId", "payload"],
+        "properties": {
+          "sample": {"type": "boolean"},
+          "imoShipNumber": {"type": "string", "description": "Project JSON name; semantic mapping to IMO0140 Ship IMO number.", "example": "1234567"},
+          "voyageNumber": {"type": "string", "description": "Project JSON name; semantic mapping to IMO0191 Voyage number.", "example": "001W"},
+          "arrivalYear": {"type": "string", "description": "RD24001 simulated port context; not an asserted IMO mapping."},
+          "arrivalSequence": {"type": "string", "description": "RD24001 simulated port arrival count; not the voyage number."},
+          "bpId": {"type": "string", "description": "RD24001 business process ID."},
+          "payload": {"type": "object", "description": "Original BP-specific project fields; no blanket IMO mapping is asserted."}
+        }
+      }
+    }
+  },
   "paths": {
     "/ships/1234567/arrivals/2026/001/bp-01.json": {
       "get": {
@@ -22,7 +39,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object"
+                  "$ref": "#/components/schemas/BpSample"
                 }
               }
             }
@@ -40,7 +57,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object"
+                  "$ref": "#/components/schemas/BpSample"
                 }
               }
             }
@@ -58,7 +75,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object"
+                  "$ref": "#/components/schemas/BpSample"
                 }
               }
             }
@@ -76,7 +93,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object"
+                  "$ref": "#/components/schemas/BpSample"
                 }
               }
             }
@@ -94,7 +111,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object"
+                  "$ref": "#/components/schemas/BpSample"
                 }
               }
             }
@@ -112,7 +129,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object"
+                  "$ref": "#/components/schemas/BpSample"
                 }
               }
             }

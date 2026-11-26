@@ -1,0 +1,23 @@
+{
+  "status": "SEMANTIC_MAPPING_NOT_OFFICIAL_SCHEMA",
+  "referenceChecked": "2026-11-26",
+  "mappings": [
+    {
+      "sampleJsonPath": "$.imoShipNumber",
+      "bpSourceJsonPath": "$.vessel.imoNumber",
+      "imoDataNumber": "IMO0140",
+      "imoReferenceModelName": "FAL_ Transport Means. IMO Ship Number. Identifier",
+      "source": "https://imocompendium.imo.org/public/IMO-Compendium/Current/DS/General%20Declaration/d11.htm"
+    },
+    {
+      "sampleJsonPath": "$.voyageNumber",
+      "bpSourceJsonPath": "$.voyage.voyageNumber",
+      "imoDataNumber": "IMO0191",
+      "imoReferenceModelName": "FAL_ Transport Movement. Voyage Number. Identifier",
+      "source": "https://imocompendium.imo.org/public/IMO-Compendium/Current/DS/General%20Declaration/d11.htm",
+      "note": "Synthetic example value 001W replaces source sample RV-TEST-001."
+    }
+  ],
+  "otherFields": "RD24001 demo fields and BP payload; no IMO equivalence claimed without further evidence.",
+  "notice": "Names are project JSON representation; field mapping is not an official IMO JSON schema, certification, or proof of a mandatory report."
+}
