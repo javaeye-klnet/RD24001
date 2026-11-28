@@ -1,0 +1,12 @@
+{
+  "scope": "Local development HTTP tests; not a live public backend or accredited test",
+  "command": "python -m unittest discover -s sample_service -v",
+  "testsRun": 66,
+  "failures": 0,
+  "errors": 0,
+  "sourcePackageStaticCases": 53,
+  "sourcePackageStaticPassed": 53,
+  "fixtures": 16,
+  "publicStaticGetOperations": 17,
+  "localRuntimeGetOperations": 18
+}
